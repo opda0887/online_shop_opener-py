@@ -1,5 +1,5 @@
 Update: 2022/8/24
-Properties: 內涵 蝦皮、momo、露天、Amazon 四類商品網頁可供查找
+Properties: 內涵 蝦皮、momo、露天、Amazon 四類商品網頁可供查找  
 Importants: 使用時相關注意事項:
 
 ----- *** Env setting *** -----
