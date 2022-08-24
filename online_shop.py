@@ -18,7 +18,7 @@ if (want != ""):
     else :
         print("所輸入的方式有誤")
 
-    store = input("欲在哪裡搜尋(1.蝦皮、2.momo、3.露天、4.以上三者皆要)---輸入編號：")
+    store = input("欲在哪裡搜尋(1.蝦皮、2.momo、3.露天、4.Amazon(無價格範圍)、5.以上四者皆要)---輸入編號：")
 
     if (store == "1") or (store == "1."):
         if money_range == "否":
@@ -66,6 +66,16 @@ if (want != ""):
             driver.get(f"https://www.ruten.com.tw/find/?q={want}")
         print("已成功協助搜尋")
     elif (store == "4") or (store == "4."):
+        if (money_range == "否") or (money_range == "否"):
+            driver = webdriver.Edge(executable_path="X:\\edge_driver\\msedgedriver.exe")
+            driver.maximize_window
+            driver.get(f"https://www.amazon.com/s?k={want}")
+        else:
+            print("所請求的方式不對，但仍幫你查找商品")
+            driver = webdriver.Edge(executable_path="X:\\edge_driver\\msedgedriver.exe")
+            driver.maximize_window
+            driver.get(f"https://www.amazon.com/s?k={want}")
+    elif (store == "5") or (store == "5."):
         page = 1
         if money_range == "否":
             driver = webdriver.Edge(executable_path="X:\\edge_driver\\msedgedriver.exe")
@@ -82,7 +92,11 @@ if (want != ""):
 
             pyautogui.hotkey('ctrl', 't', interval=0.1)
             driver.switch_to.window(driver.window_handles[page])
+            page+=1
             driver.get(f"https://www.ruten.com.tw/find/?q={want}")
+            pyautogui.hotkey('ctrl', 't', interval=0.1)
+            driver.switch_to.window(driver.window_handles[page])
+            driver.get(f"https://www.amazon.com/s?k={want}")
         elif money_range == "是":
             driver = webdriver.Edge(executable_path="X:\\edge_driver\\msedgedriver.exe")
             driver.maximize_window
@@ -93,7 +107,11 @@ if (want != ""):
             driver.get(f"https://www.momoshop.com.tw/search/searchShop.jsp?keyword={want}&_advPriceS={miniprice}&_advPriceE={maxprice}")
             pyautogui.hotkey('ctrl', 't', interval=0.1)
             driver.switch_to.window(driver.window_handles[page])
+            page+=1
             driver.get(f"https://www.ruten.com.tw/find/?q={want}&prc.now={miniprice}-{maxprice}")
+            pyautogui.hotkey('ctrl', 't', interval=0.1)
+            driver.switch_to.window(driver.window_handles[page])
+            driver.get(f"https://www.amazon.com/s?k={want}")
         print("已成功協助搜尋")
     else :
         print("目前無提供此類商城來搜尋，或者是您的輸入有誤~")
