@@ -6,7 +6,8 @@ Importants: 使用時相關注意事項:
 
 1. Interpreter: Python 3.10.2 64-bit
 
-2. Web Browser I use: Edge (can change to Google if you want, modify webdriver.Edge to webdriver.Google, and download google's webdriver)
+2. Web Browser I use: Edge  
+// can change to Google if you want, modify "webdriver.Edge" to "webdriver.Google" in code, and download google's webdriver
 
 3. Need to install: selenium, PyAutoGUI, edge-driver 
 
