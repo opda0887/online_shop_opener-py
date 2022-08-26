@@ -14,7 +14,7 @@ Importants: 使用時相關注意事項:
 // type: "pip install selenium" in cmd to install selenium  
 
 5. PyAutoGUI version: 0.9.53  
-// type: "pip install pyautogui" in cmd to install selenium  
+// type: "pip install pyautogui" in cmd to install pyautogui  
 
 6. edge-driver version: depend on what Edge version you use
 // download edge-driver: https://developer.microsoft.com/zh-tw/microsoft-edge/tools/webdriver/
