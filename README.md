@@ -1,13 +1,13 @@
 Update: 2022/8/24  
-Properties: 內涵 蝦皮、momo、露天、Amazon 四類商品網頁可供查找  
-Importants: 使用時相關注意事項:
+Properties: Include shopee、momo、ruten、Amazon 4 types of online shop to search  
+Notifications :  
 
 ----- *** Env setting *** -----  
 
 1. Interpreter: Python 3.10.2 64-bit
 
 2. Web Browser I use: Edge  
-// can change to Chrome/Google if you want, modify "webdriver.Edge" to "webdriver.Google" in code, and download google's webdriver
+// can change to Chrome if you want, modify "webdriver.Edge" to "webdriver.Chrome" in code, and download google's webdriver
 
 3. Need to install: selenium, PyAutoGUI, edge-driver 
 
@@ -21,6 +21,11 @@ Importants: 使用時相關注意事項:
 // download edge-driver: https://developer.microsoft.com/zh-tw/microsoft-edge/tools/webdriver/
 
 ----- *** In code setting *** -----  
-// in case you use Edge as browser
 
-1. executable_path= "where your "msedgedriver" in your path"
+// in case you use Edge as browser  
+1. executable_path= "where your -msedgedriver.exe- in your path"
+// in case you use Chrome as browser 
+2. executable_path= "where your -chromedriver.exe- in your path"  
+
+example to change:  
+    driver = webdriver.Edge(executable_path="C:\\folder\\chromedriver.exe")
